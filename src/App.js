@@ -1,14 +1,13 @@
 
 import './App.css';
-import './style.scss';
+import './styles/style.scss';
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import NavBar from './pages/NavBar'
 import HomePage from './pages/HomePage.js';
+import PersonalWorkPage from './pages/PersonalWorkPage.js';
+import AboutPage from './pages/AboutPage.js';
 
-function Home() {
-  return <div>HomePage Component</div>;
-}
 
 function App() {
   return (
@@ -16,7 +15,9 @@ function App() {
       <div>
         <NavBar />
         <Routes>
-          <Route path="/home" element={<HomePage />} />
+          <Route exact path="/" element={<HomePage />} />
+          <Route path="/personal-work" element={<PersonalWorkPage />} />
+          <Route path="/about" element={<AboutPage />} />
         </Routes>
       </div>
     </Router>

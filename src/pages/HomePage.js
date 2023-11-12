@@ -1,15 +1,28 @@
-import React, {useEffect ,useCallback, useState, useEventListener} from 'react';
-import { Row, Col } from 'react-bootstrap';
+import React from 'react';
+import { Container } from 'react-bootstrap';
+
+import VideoFile from '../components/videoReel/VideoFile';
 
 const HomePage = () => {
   return(
     <div>
-      <div className="homepage">
-        <div className="greeting">
-          <h1>Hi, i'm nune</h1>
-          <p>I’m a UX/UI designer / 3D Animator based in London, UK.</p>
+      <Container>
+        <div className="homepage">
+            <div className='title'>
+              <h1>Animation Portfolio</h1>
+            </div>
+            <div className='video'>
+              <div className='demo-reel'>
+                <VideoFile />
+              </div>
+              <div className='email'>
+                <a href="mailto:p.iteeyaporn@gmail.com">
+                  <p>p.iteeyaporn@gmail.com</p>
+                </a>
+              </div>
+            </div>
         </div>
-      </div>
+      </Container>
     </div>
   )
 }
