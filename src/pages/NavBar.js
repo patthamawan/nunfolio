@@ -12,6 +12,12 @@ const Menu = () =>{
           <li>
             <Link to="/home">Home</Link>
           </li>
+          <li>
+            <Link to="#">Personal Work</Link>
+          </li>
+          <li>
+            <Link to="#">About</Link>
+          </li>
         </ul>
       </nav>
 
