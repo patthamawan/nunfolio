@@ -101,10 +101,83 @@
   background-image: url('../img/videoBorder.png');
   background-size: 100% 100%; /* Adjust as needed */
   background-position: center; /* Adjust as needed */
+  position: relative;
+}
+
+
+.password-box {
+  border-radius: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+
+  .modal-content {
+    border-radius: 10px;
+    padding: 20px;
+    width: 40%;
+    input {
+      margin-bottom: 20px;
+      height: 35px;
+      border: none; 
+      border: solid 1px #ccc;
+      border-radius: 6px;
+      padding-left: 15px;
+    }
+    .password-input.incorrect {
+      border: 1px solid #c02e50; /* Change the border color to red for incorrect password */
+     
+    }
+    button {
+      width: 80px;
+      height: 35px;
+      margin: 0 auto;
+      color: white;
+      font-weight: bold;
+      background-color: $titleTextColor;
+      border: 1px solid $titleTextColor;
+      border-radius: 6px;
+      font-family: 'gluten';
+      line-height: 2.2;
+    }
+  }
+
+  p {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+}
+
+
+
+.shake {
+  animation: shake 0.8s;
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25%, 75% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
 }
 
 
 .email {
+  a {
+    display: inline-block;
+  }
   a:hover {
     text-decoration: none;
   }
@@ -130,17 +203,21 @@
       p {
         font-size: 16px;
         text-align: left;
+        margin-bottom: 15px;
       }
+      p:nth-child(2) {
+        margin-bottom: 0px;
+      }
+
     }
     .email {
       text-align: left;
-      margin-top: 30px;
+      margin-top: 20px;
       p {
         color: black;
         font-size: 18px;
       }
       p:hover {
-        font-family: 'Fredoka One';
         color: $titleTextColor;
       }
     }
@@ -166,318 +243,29 @@
     }
   }
 
-/* ======================= */
-
-/* Contact */
-  .contact {
-    position: relative;
-    top: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    h1 {
-      font-size: 80px;
-      text-transform: uppercase;
-      margin-bottom: 40px;
-    }
-    p {
-      font-family: 'Fredoka One';
-      font-size: 28px;
-      margin-top: 15px;
-      line-height: 1;
-    }
-    a {
-      color: $textColor;
-    }
-    .drawing {
-      margin-right: 80px;
-      img {
-        height: 600px;
-      }
-    }
-    .social {
-      margin-top: 40px;
-      img {
-        width: 40px;
-        height: 40px;
-        object-fit: contain;
-        margin-right: 30px;
-        opacity: 0.7;
-        &:hover {
-          opacity: 1;
-        }
-      }
-    }
-  }
-/* ======================= */
-
-/* Project samples */
-  .design-projects {
-    position: relative;
-    top: 30px;
-    display: flex;
-    align-items: center;
-    .intro {
-      h1 {
-        font-size: 60px;
-        text-align: center;
-        margin-bottom: 50px;
-      }
-      .ocupation-detail {
-        width: 80%;
-      }
-      .software {
-        width: 75%;
-        margin-top: 20px;
-        img {
-          margin-right: 25px;
-          margin-bottom: 20px;
-          object-fit: contain;
-          height: 50px;
-          width: 50px;
-        }
-      }
-    }
-  }
-
-  .download {
-    margin-top: 30px;
-    h5 {
-      font-size: 14px;
-      margin-bottom: 15px;
-    }
-    div {
-      border: 1px dashed;
-      padding: 7px 15px;
-      border-radius: 10px;
-      display: inline-block;
-      &:hover {
-        background-color: #d9f4fd;
-        font-weight: bold;
-        a {
-          color: $ancherHoverColor;
-          text-decoration: none;
-        }
-      }
-    }
-    a {
-      cursor: pointer;
-      font-size: 16px;
-    }
-  }
-  .project-list {
-    position: fixed;
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%, -10%);
-    display: flex;
-    a:hover {
-      color: #000;
-    }
-  }
-  .project {
-    background-color: #fff;
-    border-radius: 20px;
-    box-shadow: $shadowColor;
-    text-align: left;
-    height: 150px;
-    width: 230px;
-    position: relative;
-    margin: 10px;
-    transition: 0.6s;
-    background-size: 300px 300px, cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    div {
-      position: absolute;
-      top: 50%;
-      left: 20px;
-      margin-right: -50%;
-      transform: translate(0%, -42%);
-    }
+  .bg-img {
     img {
-      height: 30px;
-      width: 30px;
       position: absolute;
-      top: 10px;
-      right: 15px;
-    }
-    p.title {
-      font-size: 18px;
-      margin-bottom: 5px;
-    }
-    p {
-      color: #fff;
-      font-size: 12px;
-      text-transform: uppercase;
+      top: 0;
+      left: 0;
+      width: 30%;
     }
   }
 
-
-
-/* ======================= */
-
-/* Project Detail */
-  .project-detail {
-    margin-top: 50px;
-    .content {
-      width: 90%;
-      margin: 0 auto;
-      margin-top: 30px;
-      .detail {
-        .header {
-          margin-bottom: 15px;
-          h4 {
-            margin-bottom: 0;
-          }
-
-          p {
-            opacity: 0.6;
-          }
-        }
-        .skills {
-          margin-top: 30px;
-          p {
-            margin-bottom: 10px;
-          }
-          ul {
-            list-style: circle;
-            padding-left: 20px;
-            width: 90%;
-            li {
-              font-size: 14px;
-            }
-          }
-        }
-      }
-    }
-
-    .carousel.slide {
-      margin-right: 30px;
-      box-shadow: $shadowColor;
-      .carousel-item {
-        img {
-          height: 500px;
-          object-fit: cover;
-          object-position: top left;
-        }
-      }
-      .carousel-control-prev-icon,
-      .carousel-control-next-icon {
-        display: none;
-      }
-      .carousel-indicators {
-        bottom: -50px;
-        li {
-          background-color: $carouselIndicatorColor;
-          border: 1px solid;
-          border-radius: 50%;
-          height: 13px;
-          width: 13px;
-          opacity: 0.3;
-          transition: opacity .6s ease;
-        }
-      }
-      .carousel-indicators .active {
-        opacity: 0.8;
-      }
-    }
-
-    a.back-btn {
-      position: absolute;
-      bottom: 0px;
-    }
-
-    img.img-pencil {
-      position: absolute;
-      z-index: -1;
-      width: 150px;
-      bottom: 30px;
-      right: 10px;
-    }
-    .project-list {
-      bottom: -130px;
-      transition-duration: 0.8s;
-      z-index: 15;
-      &:hover {
-        bottom: -10px;
-        .project {
-          div {
-            transform: translate(0%, -42%);
-            left: 20px;
-          }
-          p.title {
-            transform: scale(1);
-          }
-          p:last-child {
-            opacity: 1;
-          }
-        }
-      }
-      .project {
-        div {
-          transition: 1s;
-          transform: translate(0%, -122%);
-          left: 5px;
-        }
-        p {
-          transition: 1s;
-        }
-        p.title {
-          transform: scale(0.85);
-        }
-        p:last-child {
-          opacity: 0;
-        }
-      }
-    }
-  }
 /* ======================= */
 
 
 .animation {
   position: relative;
   top: 30px;
-  .video {
-    margin-top: 20px;
-  }
-  .video-list {
-    display: flex;
-    justify-content: center;
-    iframe {
-      width: 100%;
-      height: 200px;
-      margin: 50px 15px;
+  .videos {
+    .video-player {
+      margin-bottom: 20px;
     }
   }
+
 }
 
-
-
-/* Waves */
-  .ocean {
-    height: 300px; /* change the height of the waves here */
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    overflow-x: hidden;
-  }
-  .wave {
-    // background: url("../../personal_web/src/static/wave.svg");
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-size: 100%;
-    background-repeat: no-repeat;
-  }
-  @keyframes wave {
-    0% {transform: translateX(0);}
-    50% {transform: translateX(-25%);}
-    100% {transform: translateX(-50%);}
-  }
-/* ======================= */
 
 
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
 
-import VideoFile from '../components/videoReel/VideoFile';
+import AnimReel from '../components/AnimReel';
 
 const HomePage = () => {
   return(
@@ -13,7 +13,7 @@ const HomePage = () => {
             </div>
             <div className='video'>
               <div className='demo-reel'>
-                <VideoFile />
+                <AnimReel />
               </div>
               <div className='email'>
                 <a href="mailto:p.iteeyaporn@gmail.com">
