@@ -30,11 +30,11 @@ const VideoFile = () => {
     }
   };
 
-  const handleKeyPress = (e) => {
-    if (e.key === 'Enter') {
-      handlePlayButtonClick(); // Trigger play button click on Enter key press
-    }
-  };
+  // const handleKeyPress = (e) => {
+  //   if (e.key === 'Enter') {
+  //     handlePlayButtonClick(); // Trigger play button click on Enter key press
+  //   }
+  // };
 
   return (
     <div>
@@ -47,7 +47,7 @@ const VideoFile = () => {
               type = "password"
               value = {password}
               onChange = {handlePasswordChange}
-              onKeyPress={handleKeyPress}
+              // onKeyPress={handleKeyPress}
               className = {`password-input ${isShaking ? 'shake' : ''} ${
                 !isPasswordCorrect && isShaking ? 'incorrect' : ''
               }`}

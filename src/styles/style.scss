@@ -50,8 +50,8 @@
 .navbar {
   font-size: 20px;
   justify-content: center;
-  margin: 40px auto;
-  margin-top: 80px;
+  margin: 30px auto;
+
   padding: 10px 0;
   ul {
     list-style-type: none;
@@ -86,6 +86,9 @@
 /* Homepage */
   .homepage {
     text-align: center;
+    .email {
+      margin-bottom: 50px;
+    }
   }
 
 /* ======================= */
